@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+ String str;
+ int con = 0;
+cout<<"Enter a string : ";
+getline(cin,str);
+for(int i=0 ; i<str.length ; i++)
+{
+ char ch ;
+if( ch>='a' && ch<='z' ){
+ if( ch!='a' && ch!='e' && ch!='i' && ch!='o' && ch!='u' ){
+     con++;
+   }
+ }
+}
+cout<< " Number of consonants = " << con;
+return 0 ;
+}
