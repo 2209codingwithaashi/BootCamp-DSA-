@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int mat[100][100] , r , c;
+  cout<<"Enter the no. of rows : ";
+  cin>>r;
+  cout<<"Enter the no. of columns : ";
+  cin>>c;
+  cout<<"Enter the elements : "<<endl;
+  for(int i=0;i<r;i++)
+    {
+    for(int j=0;j<c;j++)
+      {
+      cin>>mat[i][j];
+      }
+    }
+  for(int i=0;i<r;i++){
+    int start = 0;
+    int end = c-1;
+    while(start < end)
+      {
+      int temp = mat[i][start];
+      mat[i][start] = mat[i][end];
+      mat[i][end] = temp;
+      start++;
+      end--;
+      }
+    }
+  cout<<"Matrix after reversing : "<<endl;
+  for(int i=0;i<r;i++){
+    for(int j=0;j<c;j++){
+      cout<<mat[i][j]<<" ";
+      }
+    cout<<endl;
+    }
+  return 0;
+  }
